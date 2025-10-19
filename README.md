@@ -15,7 +15,9 @@ This is a simple Flask application demonstrating how to authenticate with Google
 -   Flask, Authlib installed
 
 ## Setup
+
 Create a `.env` file with the following values:
+
 ```
 export CLIENT_ID="your-google-client-id"
 export CLIENT_SECRET="your-google-client-secret"
@@ -24,3 +26,9 @@ export FLASK_SESSION_KEY="a-random-secret-key"
 
 The client id and secret can be obtained from the google authorization server:
 https://console.cloud.google.com/auth/clients
+
+To start the app run:
+
+```
+flask --app "common.app" run -p 5001
+```
