@@ -1,0 +1,21 @@
+[project]
+name = "common"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Manuel Schuler", email = "60062851+Manuel3567@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "authlib>=1.6.5",
+    "flask>=3.1.2",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+common = "common:main"
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
