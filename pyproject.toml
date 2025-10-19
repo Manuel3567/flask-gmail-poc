@@ -13,9 +13,6 @@ dependencies = [
     "requests>=2.32.5",
 ]
 
-[project.scripts]
-common = "common:main"
-
 [build-system]
 requires = ["uv_build>=0.9.3,<0.10.0"]
 build-backend = "uv_build"

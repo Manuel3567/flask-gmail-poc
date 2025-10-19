@@ -78,14 +78,14 @@ def mail():
     return redirect("/")
 
 
+@app.route("/google/authorize")
+def google_authorize():
+    redirect_uri = url_for("google_token", _external=True)
+    return oauth.google.authorize_redirect(redirect_uri)
+
+
 @app.route("/google/token")
 def google_token():
     token = oauth.google.authorize_access_token()
     session["token"] = token
     return redirect("/")
-
-
-@app.route("/google/authorize")
-def google_authorize():
-    redirect_uri = url_for("google_token", _external=True)
-    return oauth.google.authorize_redirect(redirect_uri)
